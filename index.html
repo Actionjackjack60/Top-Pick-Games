@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Pick Games</title>
+
+  <!-- Google Font: Fredoka -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: #0f1220;
+      color: #ffffff;
+    }
+
+    /* ===== Banner Header ===== */
+    header {
+      position: relative;
+      height: 340px;
+      background: url("images/banner.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 18, 32, 0.65);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .studio-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #0b0e1a;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* ===== Games Grid ===== */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .game-card {
+      background: #171a2e;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .game-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .game-card h3 {
+      margin: 5px 0 8px;
+    }
+
+    .game-card p {
+      font-size: 0.95rem;
+    }
+
+    .game-card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #8a9bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .game-card a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: #8a9bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Banner ===== -->
+  <header>
+    <div class="header-content">
+      <img src="images/studio-logo.png" alt="Top Pick Games Logo" class="studio-logo" />
+      <h1>Top Pick Games</h1>
+      <p>We make fun, replayable Roblox experiences 🎮</p>
+    </div>
+  </header>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+  </nav>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      <span class="highlight">Top Pick Games</span> is a Roblox game studio focused on
+      creating unique, polished, and replayable experiences. We prioritize strong
+      core mechanics, simple ideas, and satisfying gameplay loops.
+    </p>
+  </section>
+
+  <!-- ===== Games ===== -->
+  <section id="games">
+    <h2>Our Games</h2>
+    <p>Here are some of the games we're currently working on.</p>
+
+    <div class="games">
+      <div class="game-card">
+        <img src="images/games/dont-leave-the-circle.png" alt="Don't Leave the Circle Icon" class="game-icon" />
+        <h3>Don't Leave the Circle</h3>
+        <p>
+          A fast-paced survival game where staying inside the circle is the only rule.
+          Easy to learn, hard to survive.
+        </p>
+        <a href="#">View on Roblox</a>
+      </div>
+
+      <div class="game-card">
+        <img src="images/games/gift-grab-simulator.png" alt="Gift Grab Simulator Icon" class="game-icon" />
+        <h3>Gift Grab Simulator</h3>
+        <p>
+          Grab gifts, upgrade your stats, and race against other players to collect
+          as much as possible.
+        </p>
+        <a href="#">View on Roblox</a>
+      </div>
+
+      <div class="game-card">
+        <img src="images/games/coming-soon.png" alt="Coming Soon Icon" class="game-icon" />
+        <h3>More Coming Soon</h3>
+        <p>
+          We're always prototyping new ideas and game concepts.
+          Expect more experiments soon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
